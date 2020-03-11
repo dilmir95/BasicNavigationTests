@@ -21,7 +21,7 @@ public class BrowserFactory {
     }
     public static WebDriver getDriver (String browserName){
         if(browserName.equalsIgnoreCase("chrome")){
-            WebDriverManager.chromedriver().setup();
+            WebDriverManager.chromedriver().version("79.0").setup();
             driver = new ChromeDriver();
 
         }else if(browserName.equalsIgnoreCase("firefox")){
@@ -53,5 +53,6 @@ public class BrowserFactory {
 
         return driver;
     }
+
 
 }
